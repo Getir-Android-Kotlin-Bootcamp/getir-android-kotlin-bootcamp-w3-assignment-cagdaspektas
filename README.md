@@ -6,3 +6,9 @@ Getir Android Kotlin Bootcamp w3 Assignment
 Onboarding nav kalacak
 
 Account nav oluşturacak
+
+
+
+
+https://github.com/Getir-Android-Kotlin-Bootcamp/getir-android-kotlin-bootcamp-w3-assignment-cagdaspektas/assets/62350321/09ae3e67-057e-486e-87d9-a4f52600c7d2
+
