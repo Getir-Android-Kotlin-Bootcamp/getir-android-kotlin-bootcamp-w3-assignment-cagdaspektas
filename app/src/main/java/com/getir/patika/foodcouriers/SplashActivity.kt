@@ -10,7 +10,9 @@ import kotlinx.coroutines.launch
 class SplashActivity : AppCompatActivity() {
 
     private var userId: String? = "sdsdasds"
-    private var isFirstTime:Boolean?=true
+    //kullanıcı ilk defa uygulamaya giriyorsa buraya yönlendir
+
+    private var isFirstTime: Boolean? = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,16 +20,16 @@ class SplashActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
             delay(SPLASH_TIME)
-          if(isFirstTime == true)  startActivity(AccountActivity.callIntent(this@SplashActivity))  else  {
-
-
-
-            userId?.let {
-                startActivity(MainActivity.callIntent(this@SplashActivity))
-            } ?: run {
-                startActivity(OnboardingActivity.callIntent(this@SplashActivity))
+            //burada kontrol ediyoruz
+            if (isFirstTime == true)
+                startActivity(AccountActivity.callIntent(this@SplashActivity))
+            else {
+                 userId?.let {
+                    startActivity(MainActivity.callIntent(this@SplashActivity))
+                } ?: run {
+                    startActivity(OnboardingActivity.callIntent(this@SplashActivity))
+                }
             }
-          }
 
         }
     }
