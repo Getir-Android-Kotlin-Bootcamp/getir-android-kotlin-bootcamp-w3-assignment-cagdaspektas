@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_account"
+    app:startDestination="@id/accountFragment2">
+
+    <fragment
+        android:id="@+id/accountFragment2"
+        android:name="com.getir.patika.foodcouriers.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment2_to_setLocationFragment3"
+            app:destination="@id/setLocationFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/setLocationFragment3"
+        android:name="com.getir.patika.foodcouriers.SetLocationFragment"
+        android:label="fragment_set_location"
+        tools:layout="@layout/fragment_set_location" />
+</navigation>
